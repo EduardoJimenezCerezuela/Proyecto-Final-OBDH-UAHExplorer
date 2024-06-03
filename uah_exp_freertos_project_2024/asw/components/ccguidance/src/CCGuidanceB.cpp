@@ -75,7 +75,7 @@ void	CCGuidance::EDROOM_CTX_Top_0::FDoGuiadance()
   Pr_Time time;
 VNextTimeout+= Pr_Time(1,0); // Add X sec + Y microsec
 time=VNextTimeout;
-PUSService129::GuidanceControl(VCurrentTMList);
+PUSService129::GuidanceControl();
    //Program absolute timer 
    GuidanceTimer.InformAt( time ); 
 }
