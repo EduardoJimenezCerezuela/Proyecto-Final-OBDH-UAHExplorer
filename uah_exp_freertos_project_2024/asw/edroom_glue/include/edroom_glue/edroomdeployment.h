@@ -75,7 +75,7 @@ class CEDROOMSystemCommSAP{
  
 //!Conections
  
-	CEDROOMLocalConnection connections[5];
+	CEDROOMLocalConnection connections[7];
  
 	UAHExplorer   * mp_comp1;
 	CCExplorerManager   * mp_comp2;
@@ -92,6 +92,16 @@ class CEDROOMSystemCommSAP{
 							CCHK_FDIRMng   *p_comp4,
 							CCBKGTCExec   *p_comp5);
  
+ 
+//Signal Conversion
+ 
+	static TEDROOMSignal C2ExplorerManager_PGuidance__C6Guidance_PGuidance(TEDROOMSignal signal);
+	static TEDROOMSignal C6Guidance_PGuidance__C2ExplorerManager_PGuidance(TEDROOMSignal signal);
+ 
+//Signal Conversion
+ 
+	static TEDROOMSignal C6Guidance_PTMChannelCtrl__C3TM_ChannelCtrl_PTMChannelCtrl4(TEDROOMSignal signal);
+	static TEDROOMSignal C3TM_ChannelCtrl_PTMChannelCtrl4__C6Guidance_PTMChannelCtrl(TEDROOMSignal signal);
  
 //Signal Conversion
  

@@ -70,6 +70,64 @@ void CEDROOMSystemCommSAP::SetComponents(UAHExplorer   *p_comp1,
 //*****************************************************************************
  
  
+TEDROOMSignal CEDROOMSystemCommSAP::C2ExplorerManager_PGuidance__C6Guidance_PGuidance(TEDROOMSignal signalOut){
+ 
+	TEDROOMSignal signalIn;
+ 
+	switch(signalOut){
+ 
+		case( CCExplorerManager::SGuidance):	 signalIn=CCGuidance::SGuidance; break;
+ 
+		default: signalIn=(TEDROOMSignal)(-1); break;
+ 
+	}
+	return signalIn;
+ 
+}
+ 
+TEDROOMSignal CEDROOMSystemCommSAP::C6Guidance_PGuidance__C2ExplorerManager_PGuidance(TEDROOMSignal signalOut){
+ 
+	TEDROOMSignal signalIn;
+ 
+	switch(signalOut){
+ 
+		default: signalIn=(TEDROOMSignal)(-1); break;
+ 
+	}
+	return signalIn;
+ 
+}
+ 
+TEDROOMSignal CEDROOMSystemCommSAP::C6Guidance_PTMChannelCtrl__C3TM_ChannelCtrl_PTMChannelCtrl4(TEDROOMSignal signalOut){
+ 
+	TEDROOMSignal signalIn;
+ 
+	switch(signalOut){
+ 
+		case( CCGuidance::STxTM):	 signalIn=CCTM_ChannelCtrl::STxTM; break;
+ 
+		default: signalIn=(TEDROOMSignal)(-1); break;
+ 
+	}
+	return signalIn;
+ 
+}
+ 
+TEDROOMSignal CEDROOMSystemCommSAP::C3TM_ChannelCtrl_PTMChannelCtrl4__C6Guidance_PTMChannelCtrl(TEDROOMSignal signalOut){
+ 
+	TEDROOMSignal signalIn;
+ 
+	switch(signalOut){
+ 
+		case( CCTM_ChannelCtrl::STMQueued):	 signalIn=CCGuidance::STMQueued; break;
+ 
+		default: signalIn=(TEDROOMSignal)(-1); break;
+ 
+	}
+	return signalIn;
+ 
+}
+ 
 TEDROOMSignal CEDROOMSystemCommSAP::C5BKGTCExec_PBKGExecCtrl__C2ExplorerManager_PBKGExecCtrl(TEDROOMSignal signalOut){
  
 	TEDROOMSignal signalIn;
@@ -227,16 +285,18 @@ void CEDROOMSystemCommSAP::RegisterInterfaces(){
 	m_localCommSAP.RegisterInterface(1, mp_comp1->Timer, mp_comp1);
  
 	// Register Interface for Component 2
-	m_localCommSAP.RegisterInterface(1, mp_comp2->EvActionQueue, mp_comp2);
-	m_localCommSAP.RegisterInterface(2, mp_comp2->BKGExecCtrl, mp_comp2);
-	m_localCommSAP.RegisterInterface(3, mp_comp2->HK_FDIRCtrl, mp_comp2);
-	m_localCommSAP.RegisterInterface(4, mp_comp2->RxTC, mp_comp2);
-	m_localCommSAP.RegisterInterface(5, mp_comp2->TMChannelCtrl, mp_comp2);
+	m_localCommSAP.RegisterInterface(1, mp_comp2->Guidance, mp_comp2);
+	m_localCommSAP.RegisterInterface(2, mp_comp2->EvActionQueue, mp_comp2);
+	m_localCommSAP.RegisterInterface(3, mp_comp2->BKGExecCtrl, mp_comp2);
+	m_localCommSAP.RegisterInterface(4, mp_comp2->HK_FDIRCtrl, mp_comp2);
+	m_localCommSAP.RegisterInterface(5, mp_comp2->RxTC, mp_comp2);
+	m_localCommSAP.RegisterInterface(6, mp_comp2->TMChannelCtrl, mp_comp2);
  
 	// Register Interface for Component 3
-	m_localCommSAP.RegisterInterface(1, mp_comp3->TMChannelCtrl3, mp_comp3);
-	m_localCommSAP.RegisterInterface(2, mp_comp3->TMChannelCtrl2, mp_comp3);
-	m_localCommSAP.RegisterInterface(3, mp_comp3->TMChannelCtrl, mp_comp3);
+	m_localCommSAP.RegisterInterface(1, mp_comp3->TMChannelCtrl4, mp_comp3);
+	m_localCommSAP.RegisterInterface(2, mp_comp3->TMChannelCtrl3, mp_comp3);
+	m_localCommSAP.RegisterInterface(3, mp_comp3->TMChannelCtrl2, mp_comp3);
+	m_localCommSAP.RegisterInterface(4, mp_comp3->TMChannelCtrl, mp_comp3);
  
 	// Register Interface for Component 4
 	m_localCommSAP.RegisterInterface(1, mp_comp4->HK_FDIRCtrl, mp_comp4);
@@ -255,23 +315,31 @@ void CEDROOMSystemCommSAP::RegisterInterfaces(){
  
 void CEDROOMSystemCommSAP::SetLocalConnections(){
  
-	m_localCommSAP.Connect(mp_comp5->BKGExecCtrl, mp_comp2->BKGExecCtrl, connections[0], 
+	m_localCommSAP.Connect(mp_comp2->Guidance, mp_comp6->Guidance, connections[0], 
+					C2ExplorerManager_PGuidance__C6Guidance_PGuidance, 
+					C6Guidance_PGuidance__C2ExplorerManager_PGuidance);
+ 
+	m_localCommSAP.Connect(mp_comp6->TMChannelCtrl, mp_comp3->TMChannelCtrl4, connections[1], 
+					C6Guidance_PTMChannelCtrl__C3TM_ChannelCtrl_PTMChannelCtrl4, 
+					C3TM_ChannelCtrl_PTMChannelCtrl4__C6Guidance_PTMChannelCtrl);
+ 
+	m_localCommSAP.Connect(mp_comp5->BKGExecCtrl, mp_comp2->BKGExecCtrl, connections[2], 
 					C5BKGTCExec_PBKGExecCtrl__C2ExplorerManager_PBKGExecCtrl, 
 					C2ExplorerManager_PBKGExecCtrl__C5BKGTCExec_PBKGExecCtrl);
  
-	m_localCommSAP.Connect(mp_comp3->TMChannelCtrl3, mp_comp5->TMChannelCtrl, connections[1], 
+	m_localCommSAP.Connect(mp_comp3->TMChannelCtrl3, mp_comp5->TMChannelCtrl, connections[3], 
 					C3TM_ChannelCtrl_PTMChannelCtrl3__C5BKGTCExec_PTMChannelCtrl, 
 					C5BKGTCExec_PTMChannelCtrl__C3TM_ChannelCtrl_PTMChannelCtrl3);
  
-	m_localCommSAP.Connect(mp_comp4->TMChannelCtrl, mp_comp3->TMChannelCtrl2, connections[2], 
+	m_localCommSAP.Connect(mp_comp4->TMChannelCtrl, mp_comp3->TMChannelCtrl2, connections[4], 
 					C4HK_FDIRMng_PTMChannelCtrl__C3TM_ChannelCtrl_PTMChannelCtrl2, 
 					C3TM_ChannelCtrl_PTMChannelCtrl2__C4HK_FDIRMng_PTMChannelCtrl);
  
-	m_localCommSAP.Connect(mp_comp2->HK_FDIRCtrl, mp_comp4->HK_FDIRCtrl, connections[3], 
+	m_localCommSAP.Connect(mp_comp2->HK_FDIRCtrl, mp_comp4->HK_FDIRCtrl, connections[5], 
 					C2ExplorerManager_PHK_FDIRCtrl__C4HK_FDIRMng_PHK_FDIRCtrl, 
 					C4HK_FDIRMng_PHK_FDIRCtrl__C2ExplorerManager_PHK_FDIRCtrl);
  
-	m_localCommSAP.Connect(mp_comp2->TMChannelCtrl, mp_comp3->TMChannelCtrl, connections[4], 
+	m_localCommSAP.Connect(mp_comp2->TMChannelCtrl, mp_comp3->TMChannelCtrl, connections[6], 
 					C2ExplorerManager_PTMChannelCtrl__C3TM_ChannelCtrl_PTMChannelCtrl, 
 					C3TM_ChannelCtrl_PTMChannelCtrl__C2ExplorerManager_PTMChannelCtrl);
  
