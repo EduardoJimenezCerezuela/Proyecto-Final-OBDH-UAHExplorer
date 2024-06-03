@@ -20,6 +20,7 @@ CCExplorerManager::EDROOM_CTX_Top_0::EDROOM_CTX_Top_0(CCExplorerManager &act,
 	EDROOMcomponent(act),
 	Msg(EDROOMcomponent.Msg),
 	MsgBack(EDROOMcomponent.MsgBack),
+	Guiadance(EDROOMcomponent.Guiadance),
 	BKGExecCtrl(EDROOMcomponent.BKGExecCtrl),
 	HK_FDIRCtrl(EDROOMcomponent.HK_FDIRCtrl),
 	TMChannelCtrl(EDROOMcomponent.TMChannelCtrl),
@@ -38,6 +39,7 @@ CCExplorerManager::EDROOM_CTX_Top_0::EDROOM_CTX_Top_0(EDROOM_CTX_Top_0 &context)
 	EDROOMcomponent(context.EDROOMcomponent),
 	Msg(context.Msg),
 	MsgBack(context.MsgBack),
+	Guiadance(context.Guiadance),
 	BKGExecCtrl(context.BKGExecCtrl),
 	HK_FDIRCtrl(context.HK_FDIRCtrl),
 	TMChannelCtrl(context.TMChannelCtrl),
@@ -84,6 +86,18 @@ void	CCExplorerManager::EDROOM_CTX_Top_0::FExecPrioTC()
 
  PUSPrioTCExecutor::ExecTC(VCurrentTC,VCurrentTMList,VCurrentEvList);
 
+}
+
+
+
+void	CCExplorerManager::EDROOM_CTX_Top_0::FFwdGuiadanceTC()
+
+{
+   //Allocate data from pool
+  CDTCHandler * pSGuiadance_Data = EDROOMPoolCDTCHandler.AllocData();
+*pSGuiadance_Data=VCurrentTC;
+   //Send message 
+   Guiadance.send(SGuiadance,pSGuiadance_Data,&EDROOMPoolCDTCHandler); 
 }
 
 
@@ -220,6 +234,16 @@ bool	CCExplorerManager::EDROOM_CTX_Top_0::GAcceptTC()
 {
 
 return VCurrentTC.IsAccepted();
+
+}
+
+
+
+bool	CCExplorerManager::EDROOM_CTX_Top_0::GFwdGuiadanceTC()
+
+{
+
+return VCurrentTC.IsGuiadanceTC();
 
 }
 
@@ -424,6 +448,19 @@ void CCExplorerManager::EDROOM_SUB_Top_0::EDROOMBehaviour()
 					//Branch taken is HandleTC_FwdToBKGTCExec
 					edroomCurrentTrans.localId =
 						HandleTC_FwdToBKGTCExec;
+
+					//Next State is Ready
+					edroomNextState = Ready;
+				 } 
+				//Evaluate Branch FwdGuiadanceTC
+				else if( GFwdGuiadanceTC() )
+				{
+					//Send Asynchronous Message 
+					FFwdGuiadanceTC();
+
+					//Branch taken is HandleTC_FwdGuiadanceTC
+					edroomCurrentTrans.localId =
+						HandleTC_FwdGuiadanceTC;
 
 					//Next State is Ready
 					edroomNextState = Ready;
