@@ -132,6 +132,10 @@ protected:
 		mTCExecCtrl = ExecCtrlBKGTC;
 	}
 
+	/**
+	 * \brief Set mTCExecCtrl to ExecGuiadance
+	 *
+	 */
 	void SetExecGuiadance() {
 
 		mTCExecCtrl = ExecGuiadance;
