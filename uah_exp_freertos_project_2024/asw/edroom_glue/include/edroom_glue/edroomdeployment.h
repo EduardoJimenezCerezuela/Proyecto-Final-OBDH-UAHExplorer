@@ -105,8 +105,8 @@ class CEDROOMSystemCommSAP{
  
 //Signal Conversion
  
-	static TEDROOMSignal C2ExplorerManager_PGuiadance__C6Guidance_PGuiadance(TEDROOMSignal signal);
-	static TEDROOMSignal C6Guidance_PGuiadance__C2ExplorerManager_PGuiadance(TEDROOMSignal signal);
+	static TEDROOMSignal C2ExplorerManager_PGuidance__C6Guidance_PGuidance(TEDROOMSignal signal);
+	static TEDROOMSignal C6Guidance_PGuidance__C2ExplorerManager_PGuidance(TEDROOMSignal signal);
  
 //Signal Conversion
  

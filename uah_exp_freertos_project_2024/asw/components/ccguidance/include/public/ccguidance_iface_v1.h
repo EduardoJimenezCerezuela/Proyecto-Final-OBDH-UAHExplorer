@@ -101,8 +101,8 @@ public:
 	//******************  Component Communication Ports *******************
 	// ********************************************************************
 
-	//! Guiadance Component Port
-	CEDROOMInterface	Guiadance;
+	//! Guidance Component Port
+	CEDROOMInterface	Guidance;
 	//! TMChannelCtrl Component Port
 	CEDROOMInterface	TMChannelCtrl;
 
@@ -202,7 +202,7 @@ public:
 		CEDROOMMessage * &MsgBack;
 
 		//!Component ports
-		CEDROOMInterface & Guiadance;
+		CEDROOMInterface & Guidance;
 		CEDROOMInterface & TMChannelCtrl;
 		CEDROOMTimingInterface & GuidanceTimer;
 
@@ -214,7 +214,7 @@ public:
 		//!Transition Identifiers
 		enum TEDROOMTransitionID{Init,
 			ExecTC,
-			DoGuiadance,
+			DoGuidance,
 			EDROOMMemoryTrans };
 
 
@@ -281,7 +281,7 @@ public:
 		/**
 		 * \brief  
 		 */
-		void	FInitGuiadance();
+		void	FInitGuidance();
 
 		/**
 		 * \brief  

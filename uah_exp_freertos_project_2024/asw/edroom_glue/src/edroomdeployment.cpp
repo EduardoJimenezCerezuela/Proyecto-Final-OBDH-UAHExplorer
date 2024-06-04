@@ -76,7 +76,7 @@ void CEDROOMSystemCommSAP::SetComponents(UAHExplorer   *p_comp1,
 //*****************************************************************************
  
  
-TEDROOMSignal CEDROOMSystemCommSAP::C2ExplorerManager_PGuiadance__C6Guidance_PGuiadance(TEDROOMSignal signalOut){
+TEDROOMSignal CEDROOMSystemCommSAP::C2ExplorerManager_PGuidance__C6Guidance_PGuidance(TEDROOMSignal signalOut){
  
 	TEDROOMSignal signalIn;
  
@@ -91,7 +91,7 @@ TEDROOMSignal CEDROOMSystemCommSAP::C2ExplorerManager_PGuiadance__C6Guidance_PGu
  
 }
  
-TEDROOMSignal CEDROOMSystemCommSAP::C6Guidance_PGuiadance__C2ExplorerManager_PGuiadance(TEDROOMSignal signalOut){
+TEDROOMSignal CEDROOMSystemCommSAP::C6Guidance_PGuidance__C2ExplorerManager_PGuidance(TEDROOMSignal signalOut){
  
 	TEDROOMSignal signalIn;
  
@@ -291,7 +291,7 @@ void CEDROOMSystemCommSAP::RegisterInterfaces(){
 	m_localCommSAP.RegisterInterface(1, mp_comp1->Timer, mp_comp1);
  
 	// Register Interface for Component 2
-	m_localCommSAP.RegisterInterface(1, mp_comp2->Guiadance, mp_comp2);
+	m_localCommSAP.RegisterInterface(1, mp_comp2->Guidance, mp_comp2);
 	m_localCommSAP.RegisterInterface(2, mp_comp2->EvActionQueue, mp_comp2);
 	m_localCommSAP.RegisterInterface(3, mp_comp2->BKGExecCtrl, mp_comp2);
 	m_localCommSAP.RegisterInterface(4, mp_comp2->HK_FDIRCtrl, mp_comp2);
@@ -314,7 +314,7 @@ void CEDROOMSystemCommSAP::RegisterInterfaces(){
 	m_localCommSAP.RegisterInterface(2, mp_comp5->TMChannelCtrl, mp_comp5);
  
 	// Register Interface for Component 6
-	m_localCommSAP.RegisterInterface(1, mp_comp6->Guiadance, mp_comp6);
+	m_localCommSAP.RegisterInterface(1, mp_comp6->Guidance, mp_comp6);
 	m_localCommSAP.RegisterInterface(2, mp_comp6->TMChannelCtrl, mp_comp6);
 	m_localCommSAP.RegisterInterface(3, mp_comp6->GuidanceTimer, mp_comp6);
  
@@ -326,9 +326,9 @@ void CEDROOMSystemCommSAP::RegisterInterfaces(){
  
 void CEDROOMSystemCommSAP::SetLocalConnections(){
  
-	m_localCommSAP.Connect(mp_comp2->Guiadance, mp_comp6->Guiadance, connections[0], 
-					C2ExplorerManager_PGuiadance__C6Guidance_PGuiadance, 
-					C6Guidance_PGuiadance__C2ExplorerManager_PGuiadance);
+	m_localCommSAP.Connect(mp_comp2->Guidance, mp_comp6->Guidance, connections[0], 
+					C2ExplorerManager_PGuidance__C6Guidance_PGuidance, 
+					C6Guidance_PGuidance__C2ExplorerManager_PGuidance);
  
 	m_localCommSAP.Connect(mp_comp6->TMChannelCtrl, mp_comp3->TMChannelCtrl4, connections[1], 
 					C6Guidance_PTMChannelCtrl__C3TM_ChannelCtrl_PTMChannelCtrl4, 

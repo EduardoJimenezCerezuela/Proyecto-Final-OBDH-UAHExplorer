@@ -97,8 +97,8 @@ public:
 	//******************  Component Communication Ports *******************
 	// ********************************************************************
 
-	//! Guiadance Component Port
-	CEDROOMInterface	Guiadance;
+	//! Guidance Component Port
+	CEDROOMInterface	Guidance;
 	//! BKGExecCtrl Component Port
 	CEDROOMInterface	BKGExecCtrl;
 	//! HK_FDIRCtrl Component Port
@@ -279,7 +279,7 @@ public:
 		CEDROOMMessage * &MsgBack;
 
 		//!Component ports
-		CEDROOMInterface & Guiadance;
+		CEDROOMInterface & Guidance;
 		CEDROOMInterface & BKGExecCtrl;
 		CEDROOMInterface & HK_FDIRCtrl;
 		CEDROOMInterface & TMChannelCtrl;

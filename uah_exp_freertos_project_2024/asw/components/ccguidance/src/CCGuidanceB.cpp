@@ -18,7 +18,7 @@ CCGuidance::EDROOM_CTX_Top_0::EDROOM_CTX_Top_0(CCGuidance &act,
 	EDROOMcomponent(act),
 	Msg(EDROOMcomponent.Msg),
 	MsgBack(EDROOMcomponent.MsgBack),
-	Guiadance(EDROOMcomponent.Guiadance),
+	Guidance(EDROOMcomponent.Guidance),
 	TMChannelCtrl(EDROOMcomponent.TMChannelCtrl),
 	GuidanceTimer(EDROOMcomponent.GuidanceTimer),
 	VCurrentTMList(EDROOMpVarVCurrentTMList),
@@ -32,7 +32,7 @@ CCGuidance::EDROOM_CTX_Top_0::EDROOM_CTX_Top_0(EDROOM_CTX_Top_0 &context):
 	EDROOMcomponent(context.EDROOMcomponent),
 	Msg(context.Msg),
 	MsgBack(context.MsgBack),
-	Guiadance(context.Guiadance),
+	Guidance(context.Guidance),
 	TMChannelCtrl(context.TMChannelCtrl),
 	GuidanceTimer(context.GuidanceTimer),
 	VCurrentTMList(context.VCurrentTMList),
@@ -94,7 +94,7 @@ PUS_GuidanceTCExecutor::ExecTC(varSGuidance,VCurrentTMList,TCExecEventList);
 
 
 
-void	CCGuidance::EDROOM_CTX_Top_0::FInitGuiadance()
+void	CCGuidance::EDROOM_CTX_Top_0::FInitGuidance()
 
 {
    //Define absolute time
@@ -184,7 +184,7 @@ void CCGuidance::EDROOM_SUB_Top_0::EDROOMBehaviour()
 			//Next Transition is Init
 			case (Init):
 				//Execute Action 
-				FInitGuiadance();
+				FInitGuidance();
 				//Next State is Ready
 				edroomNextState = Ready;
 				break;
@@ -197,8 +197,8 @@ void CCGuidance::EDROOM_SUB_Top_0::EDROOMBehaviour()
 				//Next State is Ready
 				edroomNextState = Ready;
 				break;
-			//Next Transition is DoGuiadance
-			case (DoGuiadance):
+			//Next Transition is DoGuidance
+			case (DoGuidance):
 				//Execute Action 
 				FDoGuidance();
 				//Invoke Synchronous Message 
@@ -308,8 +308,8 @@ TEDROOMTransId CCGuidance::EDROOM_SUB_Top_0::EDROOMReadyArrival()
 				 if (*Msg->GetPInterface() == GuidanceTimer)
 				{
 
-					//Next transition is  DoGuiadance
-					edroomCurrentTrans.localId= DoGuiadance;
+					//Next transition is  DoGuidance
+					edroomCurrentTrans.localId= DoGuidance;
 					edroomCurrentTrans.distanceToContext = 0;
 					edroomValidMsg=true;
 				 }
