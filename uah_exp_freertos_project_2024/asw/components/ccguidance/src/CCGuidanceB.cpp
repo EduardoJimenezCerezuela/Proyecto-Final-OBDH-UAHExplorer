@@ -86,7 +86,7 @@ void	CCGuidance::EDROOM_CTX_Top_0::FExecGuidance()
 
 {
    //Handle Msg->data
-  CDTCHandler & varSGuiadance = *(CDTCHandler *)Msg->data;
+  CDTCHandler & varSGuidance = *(CDTCHandler *)Msg->data;
 CDEventList TCExecEventList;
 PUS_GuidanceTCExecutor::ExecTC(varSGuidance,VCurrentTMList,TCExecEventList); 
 
@@ -190,6 +190,8 @@ void CCGuidance::EDROOM_SUB_Top_0::EDROOMBehaviour()
 				break;
 			//Next Transition is ExecTC
 			case (ExecTC):
+				//Msg->Data Handling 
+				FExecGuidance();
 				//Invoke Synchronous Message 
 				FInvokeTxTMList();
 				//Next State is Ready
@@ -197,6 +199,8 @@ void CCGuidance::EDROOM_SUB_Top_0::EDROOMBehaviour()
 				break;
 			//Next Transition is DoGuiadance
 			case (DoGuiadance):
+				//Execute Action 
+				FDoGuidance();
 				//Invoke Synchronous Message 
 				FInvokeTxTMList();
 				//Next State is Ready
@@ -286,7 +290,7 @@ TEDROOMTransId CCGuidance::EDROOM_SUB_Top_0::EDROOMReadyArrival()
 		switch(Msg->signal)
 		{
 
-			case (SGuiadance): 
+			case (SGuidance): 
 
 				 if (*Msg->GetPInterface() == Guiadance)
 				{

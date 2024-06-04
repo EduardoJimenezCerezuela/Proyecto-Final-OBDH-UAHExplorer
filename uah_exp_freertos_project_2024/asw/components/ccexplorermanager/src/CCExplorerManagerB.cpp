@@ -90,14 +90,14 @@ void	CCExplorerManager::EDROOM_CTX_Top_0::FExecPrioTC()
 
 
 
-void	CCExplorerManager::EDROOM_CTX_Top_0::FFwdGuiadanceTC()
+void	CCExplorerManager::EDROOM_CTX_Top_0::FFwdGuidanceTC()
 
 {
    //Allocate data from pool
-  CDTCHandler * pSGuiadance_Data = EDROOMPoolCDTCHandler.AllocData();
-*pSGuiadance_Data=VCurrentTC;
+  CDTCHandler * pSGuidance_Data = EDROOMPoolCDTCHandler.AllocData();
+*pSGuidance_Data=VCurrentTC;
    //Send message 
-   Guiadance.send(SGuiadance,pSGuiadance_Data,&EDROOMPoolCDTCHandler); 
+   Guiadance.send(SGuidance,pSGuidance_Data,&EDROOMPoolCDTCHandler); 
 }
 
 
@@ -239,11 +239,11 @@ return VCurrentTC.IsAccepted();
 
 
 
-bool	CCExplorerManager::EDROOM_CTX_Top_0::GFwdGuiadanceTC()
+bool	CCExplorerManager::EDROOM_CTX_Top_0::GFwdGuidanceTC()
 
 {
 
-return VCurrentTC.IsGuiadanceTC();
+return VCurrentTC.IsGuidanceTC();
 
 }
 
@@ -452,15 +452,15 @@ void CCExplorerManager::EDROOM_SUB_Top_0::EDROOMBehaviour()
 					//Next State is Ready
 					edroomNextState = Ready;
 				 } 
-				//Evaluate Branch FwdGuiadanceTC
-				else if( GFwdGuiadanceTC() )
+				//Evaluate Branch FwdGuidanceTC
+				else if( GFwdGuidanceTC() )
 				{
 					//Send Asynchronous Message 
-					FFwdGuiadanceTC();
+					FFwdGuidanceTC();
 
-					//Branch taken is HandleTC_FwdGuiadanceTC
+					//Branch taken is HandleTC_FwdGuidanceTC
 					edroomCurrentTrans.localId =
-						HandleTC_FwdGuiadanceTC;
+						HandleTC_FwdGuidanceTC;
 
 					//Next State is Ready
 					edroomNextState = Ready;

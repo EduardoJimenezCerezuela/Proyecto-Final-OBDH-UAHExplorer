@@ -302,7 +302,7 @@ public:
 			HandleTC_ToReboot,
 			HandleTC_FwdHK_FDIRTC,
 			HandleTC_FwdToBKGTCExec,
-			HandleTC_FwdGuiadanceTC,
+			HandleTC_FwdGuidanceTC,
 			HandleTC_ExecPrioTC,
 			NewEvAction,
 			EDROOMMemoryTrans };
@@ -375,7 +375,7 @@ public:
 		/**
 		 * \brief  
 		 */
-		void	FFwdGuiadanceTC();
+		void	FFwdGuidanceTC();
 
 		/**
 		 * \brief  
@@ -430,7 +430,7 @@ public:
 		/**
 		 * \brief  
 		 */
-		bool	GFwdGuiadanceTC();
+		bool	GFwdGuidanceTC();
 
 		/**
 		 * \brief  
