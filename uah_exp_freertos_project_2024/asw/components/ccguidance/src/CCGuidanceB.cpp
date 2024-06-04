@@ -68,7 +68,7 @@ bool CCGuidance::EDROOM_CTX_Top_0::EDROOMSearchContextTrans(
 
 	// User-defined Functions   ****************************
 
-void	CCGuidance::EDROOM_CTX_Top_0::FDoGuiadance()
+void	CCGuidance::EDROOM_CTX_Top_0::FDoGuidance()
 
 {
    //Define absolute time
@@ -82,13 +82,13 @@ PUSService129::GuidanceControl();
 
 
 
-void	CCGuidance::EDROOM_CTX_Top_0::FExecGuiadance()
+void	CCGuidance::EDROOM_CTX_Top_0::FExecGuidance()
 
 {
    //Handle Msg->data
   CDTCHandler & varSGuiadance = *(CDTCHandler *)Msg->data;
 CDEventList TCExecEventList;
-PUS_GuidanceTCExecutor::ExecTC(varSGuiadance,VCurrentTMList,TCExecEventList); 
+PUS_GuidanceTCExecutor::ExecTC(varSGuidance,VCurrentTMList,TCExecEventList); 
 
 }
 
@@ -190,8 +190,6 @@ void CCGuidance::EDROOM_SUB_Top_0::EDROOMBehaviour()
 				break;
 			//Next Transition is ExecTC
 			case (ExecTC):
-				//Msg->Data Handling 
-				FExecGuiadance();
 				//Invoke Synchronous Message 
 				FInvokeTxTMList();
 				//Next State is Ready
@@ -199,10 +197,6 @@ void CCGuidance::EDROOM_SUB_Top_0::EDROOMBehaviour()
 				break;
 			//Next Transition is DoGuiadance
 			case (DoGuiadance):
-				//Msg->Data Handling 
-				FExecGuiadance();
-				//Execute Action 
-				FDoGuiadance();
 				//Invoke Synchronous Message 
 				FInvokeTxTMList();
 				//Next State is Ready

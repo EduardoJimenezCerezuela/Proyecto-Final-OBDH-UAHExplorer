@@ -82,7 +82,7 @@ TEDROOMSignal CEDROOMSystemCommSAP::C2ExplorerManager_PGuiadance__C6Guidance_PGu
  
 	switch(signalOut){
  
-		case( CCExplorerManager::SGuiadance):	 signalIn=CCGuidance::SGuiadance; break;
+		case( CCExplorerManager::SGuidance):	 signalIn=CCGuidance::SGuidance; break;
  
 		default: signalIn=(TEDROOMSignal)(-1); break;
  

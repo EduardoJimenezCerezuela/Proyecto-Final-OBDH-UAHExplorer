@@ -36,7 +36,7 @@ public:
 	 */
 	 enum TEDROOMCCGuidanceSignal { EDROOMSignalTimeout, 
 							EDROOMSignalDestroy, 
-							SGuiadance, 
+							SGuidance, 
 							STxTM, 
 							STMQueued };
 
@@ -185,7 +185,7 @@ public:
 	 */
 	enum TEDROOMCCGuidanceSignal { EDROOMSignalTimeout,
 		EDROOMSignalDestroy,
-		SGuiadance,
+		SGuidance,
 		STxTM,
 		STMQueued };
 
@@ -271,12 +271,12 @@ public:
 		/**
 		 * \brief  
 		 */
-		void	FDoGuiadance();
+		void	FDoGuidance();
 
 		/**
 		 * \brief  
 		 */
-		void	FExecGuiadance();
+		void	FExecGuidance();
 
 		/**
 		 * \brief  
