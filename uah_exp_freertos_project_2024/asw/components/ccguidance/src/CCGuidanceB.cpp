@@ -292,7 +292,7 @@ TEDROOMTransId CCGuidance::EDROOM_SUB_Top_0::EDROOMReadyArrival()
 
 			case (SGuidance): 
 
-				 if (*Msg->GetPInterface() == Guiadance)
+				 if (*Msg->GetPInterface() == Guidance)
 				{
 
 					//Next transition is  ExecTC

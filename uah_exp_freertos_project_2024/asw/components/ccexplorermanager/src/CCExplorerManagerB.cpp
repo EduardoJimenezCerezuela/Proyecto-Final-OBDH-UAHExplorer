@@ -97,7 +97,7 @@ void	CCExplorerManager::EDROOM_CTX_Top_0::FFwdGuidanceTC()
   CDTCHandler * pSGuidance_Data = EDROOMPoolCDTCHandler.AllocData();
 *pSGuidance_Data=VCurrentTC;
    //Send message 
-   Guiadance.send(SGuidance,pSGuidance_Data,&EDROOMPoolCDTCHandler); 
+   Guidance.send(SGuidance,pSGuidance_Data,&EDROOMPoolCDTCHandler);
 }
 
 
