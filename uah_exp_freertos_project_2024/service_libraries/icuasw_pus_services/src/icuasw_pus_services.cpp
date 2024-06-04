@@ -99,7 +99,7 @@ void PUS_GuidanceTCExecutor::ExecTC(CDTCHandler &tc_handler, CDTMList &tm_list, 
 	switch (tc_handler.GetType()){
 	case (129):
 			PUSService129::ExecTC(tc_handler, tm_list);
-	break;
+		break;
 	default:
 		break;
 

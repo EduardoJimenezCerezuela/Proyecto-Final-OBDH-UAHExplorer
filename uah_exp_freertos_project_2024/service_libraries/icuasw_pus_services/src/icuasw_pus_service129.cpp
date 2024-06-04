@@ -27,7 +27,13 @@ void PUSService129::ExecTC(CDTCHandler &tcHandler, CDTMList &tmList) {
 
 	switch (tcHandler.GetSubType()) {
 
-	//TODO
+	case(1):
+		Exec129_1TC(tcHandler, tmList);
+		break;
+	case(2):
+		Exec129_2TC(tcHandler, tmList);
+		break;
+	//TODO (DONE)
 
 	default:
 		break;
@@ -37,16 +43,43 @@ void PUSService129::ExecTC(CDTCHandler &tcHandler, CDTMList &tmList) {
 
 void PUSService129::Exec129_1TC(CDTCHandler &tcHandler, CDTMList &tmList) {
 
+	// EL TC[129,1] fija la velocidad horizontal a alcanzar
+	// Tenemos que sacar los valores CVx y CVy correspondientes del TC
+	// En las diapositivas, el App Data son floats, por tanto:
 
-	//TODO
+	float CVx = tcHandler.GetNextFloat(); // El primer float es de CVx
+	float CVy = tcHandler.GetNextFloat(); // El siguiente float es de CVy
 
+	// Guardamos los valores en variables estáticas (definidas en la funcion GuidanceControl de debajo
 
+	sCVx = CVx;
+	sCVy = CVy;
+
+	// Generamos la TM[1,7] de respuesta
+	PUSService1::BuildTM_1_7(tcHandler, tmList);
+
+	//TODO (DONE)
 
 }
 
 void PUSService129::Exec129_2TC(CDTCHandler &tcHandler, CDTMList &tmList) {
 
-	//TODO
+	// EL TC[129,2] fija el control proporcional
+	// Tenemos que sacar los valores KpX y Kpy correspondientes del TC
+	// En las diapositivas, el App Data son floats, por tanto:
+
+	float KpX = tcHandler.GetNextFloat(); // El primer float es de KpX
+	float KpY = tcHandler.GetNextFloat(); // El siguiente float es de KpY
+
+	// Guardamos los valores en variables estáticas (definidas en la funcion GuidanceControl de debajo
+
+	sKpx = KpX;
+	sKpy = KpY;
+
+	// Generamos la TM[1,7] de respuesta
+	PUSService1::BuildTM_1_7(tcHandler, tmList);
+
+	//TODO (DONE)
 
 }
 

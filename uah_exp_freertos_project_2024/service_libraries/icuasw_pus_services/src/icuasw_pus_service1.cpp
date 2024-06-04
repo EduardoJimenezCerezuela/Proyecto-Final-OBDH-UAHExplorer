@@ -221,6 +221,22 @@ void PUSService1::TryTCAcceptation(CDTCHandler &tcHandler) {
 				acceptationStatus = TCAcceptationSubTypeError;
 			}
 			break;
+
+			// TODO (el 129 - DONE)
+			case (129):
+				switch (subtype) {
+				case (1):
+					//TC Classified as Guidance
+					tcHandler.SetExecGuidance();
+					break;
+				case (2):
+					//TC Classified as Guidance
+					tcHandler.SetExecGuidance();
+					break;
+				default:
+					acceptationStatus = TCAcceptationSubTypeError;
+				}
+				break; // Fin del 129
 		default:
 			//TC is not accepted
 			acceptationStatus = TCAcceptationTypeError;
