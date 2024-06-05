@@ -14,7 +14,7 @@ float PUSService129::sFz;
 
 float PUSService129::sCVx = 0;
 float PUSService129::sCVy = 0;
-//It is not used in Guindance Mode
+//It is not used in Guidance Mode
 float PUSService129::sCVz = 0;
 
 float PUSService129::sKpx = 0.1;
