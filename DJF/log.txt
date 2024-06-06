@@ -1,0 +1,485 @@
+Current UniTime is = 100001
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100002
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.59, 2.77, 3.30, 4.99, 9.96]
+
+Current UniTime is = 100003
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100004
+
+GSS Tx TC(129,2) FT_UAH_EXP_step 0, Set Kpx=0.2 and Kpy=0.2
+GSS Rx TM (1,1)
+GSS Rx TM (1,7)
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.59, 2.82, 3.32, 4.99, 9.95]
+
+Current UniTime is = 100005
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 10 Param Values [0.000 m/s, 0.000 m/s, 8.138 m/s, 1.000 kg]
+
+Current UniTime is = 100006
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.60, 2.77, 3.32, 4.99, 10.05]
+
+Current UniTime is = 100007
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100008
+
+GSS Tx TC(129,1) FT_UAH_EXP_step 1, Set Command Vx=-0.1 and Vy=0.3
+GSS Rx TM (1,1)
+GSS Rx TM (1,7)
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.62, 2.81, 3.31, 4.99, 10.05]
+
+Current UniTime is = 100009
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100010
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.62, 2.79, 3.32, 5.01, 10.01]
+GSS Rx TM (3,25) SID 10 Param Values [-0.020 m/s, 0.060 m/s, 16.262 m/s, 0.999 kg]
+
+Current UniTime is = 100011
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100012
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.60, 2.80, 3.30, 5.00, 10.02]
+
+Current UniTime is = 100013
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100014
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.62, 2.82, 3.28, 5.00, 9.96]
+
+Current UniTime is = 100015
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 10 Param Values [-0.074 m/s, 0.222 m/s, 24.385 m/s, 0.997 kg]
+
+Current UniTime is = 100016
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.62, 2.78, 3.28, 5.00, 10.04]
+
+Current UniTime is = 100017
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100018
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.62, 2.78, 3.32, 4.99, 10.02]
+
+Current UniTime is = 100019
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100020
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.59, 2.80, 3.32, 5.00, 10.04]
+GSS Rx TM (3,25) SID 10 Param Values [-0.091 m/s, 0.274 m/s, 32.508 m/s, 0.996 kg]
+
+Current UniTime is = 100021
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100022
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.61, 2.79, 3.31, 5.01, 10.03]
+
+Current UniTime is = 100023
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100024
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.57, 2.80, 3.32, 5.01, 10.04]
+
+Current UniTime is = 100025
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 10 Param Values [-0.097 m/s, 0.292 m/s, 40.631 m/s, 0.996 kg]
+
+Current UniTime is = 100026
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.59, 2.80, 3.28, 5.02, 10.03]
+
+Current UniTime is = 100027
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100028
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.60, 2.82, 3.29, 4.98, 10.02]
+
+Current UniTime is = 100029
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100030
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.59, 2.82, 3.30, 4.99, 10.02]
+GSS Rx TM (3,25) SID 10 Param Values [-0.099 m/s, 0.297 m/s, 48.754 m/s, 0.996 kg]
+
+Current UniTime is = 100031
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100032
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.59, 2.80, 3.28, 5.01, 9.99]
+
+Current UniTime is = 100033
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100034
+
+GSS Tx TC(129,2) FT_UAH_EXP_step 2, Set Kpx=0.5 and Kpy=0.5
+GSS Rx TM (1,1)
+GSS Rx TM (1,7)
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.61, 2.79, 3.32, 4.98, 9.96]
+
+Current UniTime is = 100035
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 10 Param Values [-0.100 m/s, 0.299 m/s, 56.877 m/s, 0.996 kg]
+
+Current UniTime is = 100036
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.59, 2.78, 3.28, 5.02, 10.01]
+
+Current UniTime is = 100037
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100038
+
+GSS Tx TC(129,1) FT_UAH_EXP_step 3, Set Command Vx=0.4 and Vy=-0.2
+GSS Rx TM (1,1)
+GSS Rx TM (1,7)
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.61, 2.81, 3.31, 5.02, 9.99]
+
+Current UniTime is = 100039
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100040
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.60, 2.79, 3.31, 5.00, 9.97]
+GSS Rx TM (3,25) SID 10 Param Values [0.000 m/s, 0.200 m/s, 65.015 m/s, 0.994 kg]
+
+Current UniTime is = 100041
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100042
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.59, 2.79, 3.31, 5.00, 9.96]
+
+Current UniTime is = 100043
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100044
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.57, 2.81, 3.32, 5.01, 10.02]
+
+Current UniTime is = 100045
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 10 Param Values [0.376 m/s, -0.176 m/s, 73.138 m/s, 0.987 kg]
+
+Current UniTime is = 100046
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.60, 2.78, 3.29, 4.98, 10.00]
+
+Current UniTime is = 100047
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100048
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.59, 2.80, 3.28, 4.98, 10.05]
+
+Current UniTime is = 100049
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100050
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.58, 2.78, 3.31, 4.98, 10.03]
+GSS Rx TM (3,25) SID 10 Param Values [0.399 m/s, -0.199 m/s, 81.262 m/s, 0.986 kg]
+
+Current UniTime is = 100051
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100052
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.59, 2.82, 3.32, 5.01, 10.04]
+
+Current UniTime is = 100053
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100054
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.58, 2.79, 3.27, 5.00, 9.98]
+
+Current UniTime is = 100055
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 10 Param Values [0.400 m/s, -0.200 m/s, 89.385 m/s, 0.986 kg]
+
+Current UniTime is = 100056
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.58, 2.82, 3.29, 5.02, 10.02]
+
+Current UniTime is = 100057
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100058
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.59, 2.80, 3.29, 4.99, 9.96]
+
+Current UniTime is = 100059
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100060
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.60, 2.82, 3.30, 5.00, 9.95]
+GSS Rx TM (3,25) SID 10 Param Values [0.400 m/s, -0.200 m/s, 97.508 m/s, 0.986 kg]
+
+Current UniTime is = 100061
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100062
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.61, 2.78, 3.29, 4.99, 9.96]
+
+Current UniTime is = 100063
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100064
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.60, 2.77, 3.29, 5.01, 9.95]
+
+Current UniTime is = 100065
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 10 Param Values [0.400 m/s, -0.200 m/s, 105.631 m/s, 0.986 kg]
+
+Current UniTime is = 100066
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.59, 2.82, 3.32, 5.02, 9.98]
+
+Current UniTime is = 100067
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100068
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.61, 2.81, 3.32, 5.02, 10.03]
+
+Current UniTime is = 100069
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100070
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.61, 2.79, 3.28, 4.99, 9.95]
+GSS Rx TM (3,25) SID 10 Param Values [0.400 m/s, -0.200 m/s, 113.754 m/s, 0.986 kg]
+
+Current UniTime is = 100071
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100072
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.61, 2.81, 3.32, 5.00, 10.00]
+
+Current UniTime is = 100073
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100074
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.61, 2.81, 3.32, 5.00, 9.99]
+
+Current UniTime is = 100075
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 10 Param Values [0.400 m/s, -0.200 m/s, 121.877 m/s, 0.986 kg]
+
+Current UniTime is = 100076
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.60, 2.82, 3.28, 5.00, 9.95]
+
+Current UniTime is = 100077
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100078
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.59, 2.78, 3.29, 5.02, 10.00]
+
+Current UniTime is = 100079
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100080
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.61, 2.80, 3.29, 5.00, 10.04]
+GSS Rx TM (3,25) SID 10 Param Values [0.400 m/s, -0.200 m/s, 130.015 m/s, 0.986 kg]
+
+Current UniTime is = 100081
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100082
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.62, 2.82, 3.32, 5.02, 9.98]
+
+Current UniTime is = 100083
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100084
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.61, 2.78, 3.29, 4.98, 9.97]
+
+Current UniTime is = 100085
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 10 Param Values [0.400 m/s, -0.200 m/s, 138.138 m/s, 0.986 kg]
+
+Current UniTime is = 100086
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.61, 2.82, 3.32, 5.01, 9.97]
+
+Current UniTime is = 100087
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100088
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.62, 2.77, 3.31, 5.01, 9.95]
+
+Current UniTime is = 100089
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100090
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.57, 2.78, 3.30, 4.99, 9.95]
+GSS Rx TM (3,25) SID 10 Param Values [0.400 m/s, -0.200 m/s, 146.262 m/s, 0.986 kg]
+
+Current UniTime is = 100091
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100092
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.62, 2.77, 3.27, 5.00, 10.04]
+
+Current UniTime is = 100093
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100094
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.60, 2.78, 3.29, 4.98, 10.04]
+
+Current UniTime is = 100095
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 10 Param Values [0.400 m/s, -0.200 m/s, 154.385 m/s, 0.986 kg]
+
+Current UniTime is = 100096
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.59, 2.81, 3.30, 5.00, 10.05]
+
+Current UniTime is = 100097
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100098
+Do_HK
+Do_Monitoring
+GSS Rx TM (3,25) SID 0 Param Values [1.61, 2.82, 3.31, 5.02, 10.00]
+
+Current UniTime is = 100099
+Do_HK
+Do_Monitoring
+
+Current UniTime is = 100100
+
+GSS Tx TC(128,1) FT_UAH_EXP_step 3, Reset
+GSS Rx TM (1,1)
+GSS Rx TM (1,7)
